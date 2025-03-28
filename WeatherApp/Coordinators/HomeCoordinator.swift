@@ -20,7 +20,8 @@ class HomeCoordinator: RootViewCoordinator {
     }
     
     private lazy var navigationController: UINavigationController = {
-        let homeVC = HomeViewController()
+        let viewModel = HomeViewModel()
+        let homeVC = HomeViewController(viewModel: viewModel)
         let navigationController = UINavigationController(rootViewController: homeVC)
         return navigationController
     }()
